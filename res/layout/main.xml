@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res/chan.android.game2048"
+              android:id="@+id/main_$_linearlayout_outermost"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/brown_2">
+
+    <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <TextView
+                android:id="@+id/main_$_textview_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textStyle="bold"
+                android:text="2048"
+                android:textSize="60sp"
+                android:textColor="@color/aluminum5"
+                />
+
+        <chan.android.game2048.ScoreBoxView
+                android:id="@+id/main_$_scoreboxview_current"
+                android:layout_toLeftOf="@+id/main_$_scoreboxview_best"
+                custom:label_text="Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <chan.android.game2048.ScoreBoxView
+                android:id="@+id/main_$_scoreboxview_best"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                custom:label_text="Best"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            >
+
+        <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="1dp"
+                android:text="Join the number to get the 2048 tile!"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/aluminum4"
+                android:maxLines="2"
+                android:layout_weight="0.6"
+                />
+
+        <Button
+                android:layout_marginLeft="5dp"
+                android:id="@+id/main_$_button_new_game"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="New Game"
+                android:layout_weight="0.4"
+                android:textStyle="bold"
+                />
+
+    </LinearLayout>
+
+    <chan.android.game2048.MatrixView
+            android:id="@+id/main_$_matrixview"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            />
+
+    <TextView
+            android:id="@+id/main_$_textview_how_to_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="HOW TO PLAY: Use your arrow keys to move the tiles. When two tiles with the same number touch, they merge into one!"
+            android:textColor="@color/aluminum4"
+            />
+</LinearLayout>
+
