@@ -36,7 +36,7 @@ public class Matrix {
 
         // Generate 2 random spots
         generate(2);
-        generate(2);
+        generate(4);
     }
 
     private void generateAll() {
@@ -55,19 +55,20 @@ public class Matrix {
 
     /**
      * Generate a square with the distribution:
-     *      60% = 2
-     *      20% = 4
-     *      20% = 'empty'
+     *      80% = 2
+     *      15% = 4
+     *      5% = 'empty'
      */
-    public void generate() {
-        int v = random.nextInt(10);
-        if (0 <= v && v <= 5) {
+    public boolean generate() {
+        int v = random.nextInt(100);
+        if (0 <= v && v <= 79) {
             generate(2);
-        } else if (v <= 6 && v <= 7) {
+            return true;
+        } else if (80 <= v && v <= 95) {
             generate(4);
-        } else {
-            // Don't generate, empty square
+            return true;
         }
+        return false;
     }
 
     public Matrix(Matrix copy) {

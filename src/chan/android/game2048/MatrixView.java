@@ -166,17 +166,11 @@ public class MatrixView extends TableLayout implements Swiper {
     }
 
     private void handleSwipe(Direction dir) {
-        if (moveListener != null) {
-            int score = matrix.swipe(dir);
-            boolean gameOver = matrix.isStuck();
-            moveListener.onMove(score, gameOver);
-        }
-        updateDisplay(dir);
-    }
-
-    private void updateDisplay(Direction dir) {
-        matrix.generate();
+        int score = matrix.swipe(dir);
+        boolean gameOver = matrix.isStuck();
+        boolean newSquare = matrix.generate();
         displayMatrix(matrix, dir);
+        moveListener.onMove(score, gameOver, newSquare);
     }
 
     private void applyEffect(Button button, Direction dir) {

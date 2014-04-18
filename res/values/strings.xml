@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">2048</string>
+    <string name="game_title">
+      <![CDATA[
+      Join the number to get the <strong><font color="#FF9933">2048!</font></strong>
+      ]]></string>
 </resources>
