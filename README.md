@@ -23,6 +23,9 @@ https://play.google.com/store/apps/details?id=chan.android.game2048
 ##Screenshots
 
 [<img src="https://raw.githubusercontent.com/channguyen/2048-android/master/playstore/one.png">]
+[<img src="https://raw.githubusercontent.com/channguyen/2048-android/master/playstore/two.png">]
+[<img src="https://raw.githubusercontent.com/channguyen/2048-android/master/playstore/three.png">]
+
 
 
 ##Developed By
