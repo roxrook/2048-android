@@ -20,6 +20,10 @@ Further developments will include:
 You can find it on Google Play Store:
 https://play.google.com/store/apps/details?id=chan.android.game2048
 
+##Screenshots
+
+[<img src="https://raw.githubusercontent.com/channguyen/2048-android/master/playstore/one.png">]
+
 
 ##Developed By
 
