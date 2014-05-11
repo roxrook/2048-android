@@ -35,8 +35,9 @@ public class Matrix {
         newSpot = new Spot(0, 0);
 
         // Generate 2 random spots
-        generate(2);
-        generate(4);
+        for (int i = 0; i < 5; ++i) {
+            generate(2);
+        }
     }
 
     private void generateAll() {
