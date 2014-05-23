@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.VelocityTracker;
@@ -119,7 +118,6 @@ public class MatrixView extends TableLayout implements Swiper {
                 } else {
                     tiles[r][c].setText(Integer.toString(number));
                 }
-                tiles[r][c].setTextSize(TypedValue.COMPLEX_UNIT_SP, getTextSize(number));
                 tiles[r][c].setBackground(getResources().getDrawable(getDrawableId(number)));
 
                 if (matrix.isMergeSpot(r, c)) {
