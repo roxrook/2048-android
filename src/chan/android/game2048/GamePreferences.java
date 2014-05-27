@@ -15,7 +15,7 @@ public class GamePreferences {
 
     public static void initialize(Context context) {
         if (prefs == null) {
-            prefs = context.getSharedPreferences("chan.csun.game._2048", Context.MODE_PRIVATE);
+            prefs = context.getSharedPreferences("chan.android.game._2048.prefs_", Context.MODE_PRIVATE);
         }
     }
 

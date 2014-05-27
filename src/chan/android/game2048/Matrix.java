@@ -36,22 +36,22 @@ public class Matrix {
 
         // Generate 2 random spots
         for (int i = 0; i < 5; ++i) {
-            generate(2);
+            spawn(2);
         }
     }
 
     private void generateAll() {
-        generate(2);
-        generate(4);
-        generate(8);
-        generate(16);
-        generate(32);
-        generate(64);
-        generate(128);
-        generate(256);
-        generate(512);
-        generate(1024);
-        generate(2048);
+        spawn(2);
+        spawn(4);
+        spawn(8);
+        spawn(16);
+        spawn(32);
+        spawn(64);
+        spawn(128);
+        spawn(256);
+        spawn(512);
+        spawn(1024);
+        spawn(2048);
     }
 
     /**
@@ -63,10 +63,10 @@ public class Matrix {
     public boolean generate() {
         int v = random.nextInt(100);
         if (0 <= v && v <= 79) {
-            generate(2);
+            spawn(2);
             return true;
         } else if (80 <= v && v <= 95) {
-            generate(4);
+            spawn(4);
             return true;
         }
         return false;
@@ -97,7 +97,7 @@ public class Matrix {
         return numbers[r][c];
     }
 
-    private void generate(int n) {
+    private void spawn(int n) {
         collectEmptySpots();
         if (!emptySpots.isEmpty()) {
             int i = random.nextInt(emptySpots.size());
